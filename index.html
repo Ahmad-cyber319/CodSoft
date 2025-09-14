@@ -30,7 +30,6 @@
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
     .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
     @media (max-width:880px){.hero{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.avatar{width:48px;height:48px}}
-    /* small utilities */
     .muted{color:var(--muted)}
     .link{color:var(--accent);text-decoration:none;font-weight:700}
   </style>
@@ -64,7 +63,7 @@
               <a class="btn" href="Syed_Amaan_Ahmad_Resume.pdf" target="_blank" download>Download Resume (PDF)</a>
             </div>
             <div style="margin-top:12px">
-              <a class="link" href="https://www.linkedin.com/in/amaan-ahmad-a10ab8203" target="_blank">LinkedIn</a> &nbsp; • &nbsp; <a class="link" href="#" id="githubLink">GitHub (replace link)</a>
+              <a class="link" href="https://www.linkedin.com/in/amaan-ahmad-a10ab8203" target="_blank">LinkedIn</a> &nbsp; • &nbsp; <a class="link" href="https://github.com/ahmad-cyber319" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -109,19 +108,19 @@
           <div class="project">
             <h4>Responsive Portfolio Website</h4>
             <p class="muted">Built a responsive personal portfolio using HTML, CSS & JavaScript. Deployed on GitHub Pages.</p>
-            <div style="margin-top:8px"><a class="link" href="#">Demo (replace link)</a></div>
+            <div style="margin-top:8px"><a class="link" href="https://ahmad-cyber319.github.io/portfolio/" target="_blank">Live Demo</a></div>
           </div>
 
           <div class="project">
-            <h4>Landing Page (Sample)</h4>
-            <p class="muted">Designed a marketing landing page to practice layout, grid, and responsive design.</p>
-            <div style="margin-top:8px"><a class="link" href="#">Live (replace link)</a></div>
+            <h4>Landing Page</h4>
+            <p class="muted">Designed a modern, responsive landing page with HTML & CSS focusing on layout, design, and user experience.</p>
+            <div style="margin-top:8px"><a class="link" href="https://ahmad-cyber319.github.io/CodSoft/landing-page" target="_blank">Live Demo</a></div>
           </div>
 
           <div class="project">
             <h4>JavaScript Calculator</h4>
-            <p class="muted">A basic calculator app using JS for arithmetic operations and CSS grid for layout.</p>
-            <div style="margin-top:8px"><a class="link" href="#">Code (replace link)</a></div>
+            <p class="muted">A functional calculator built with HTML, CSS, and JavaScript to perform basic arithmetic operations.</p>
+            <div style="margin-top:8px"><a class="link" href="https://ahmad-cyber319.github.io/CodSoft/calculator" target="_blank">Live Demo</a></div>
           </div>
         </div>
       </div>
@@ -157,7 +156,6 @@
   </div>
 
   <script>
-    // small interactions
     document.getElementById('year').textContent = new Date().getFullYear();
     function sendMail(e){
       e.preventDefault();
@@ -168,10 +166,6 @@
       const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
       window.location.href = 'mailto:syedamaanahmad66@gmail.com?subject=' + subject + '&body=' + body;
     }
-    // replace github placeholder link when you have one
-    const githubLink = document.getElementById('githubLink');
-    githubLink.href = 'https://github.com/your-username';
-    githubLink.textContent = 'GitHub: your-username';
   </script>
 </body>
 </html>
