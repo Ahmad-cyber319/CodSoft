@@ -6,149 +6,90 @@
   <title>Syed Amaan Ahmad | Portfolio</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
+    body { font-family: "Poppins", sans-serif; background: #0d0d0d; color: #fff; scroll-behavior: smooth; }
 
     header {
-      background: rgba(0,0,0,0.8);
-      position: fixed;
-      width: 100%; top: 0; left: 0;
-      z-index: 1000; text-align: center;
-      padding: 15px 0; border-bottom: 1px solid #222;
+      background: rgba(0,0,0,0.8); position: fixed; width: 100%; top: 0; left: 0;
+      z-index: 1000; text-align: center; padding: 15px 0; border-bottom: 1px solid #222;
     }
-    header h1 {
-      font-size: 24px; letter-spacing: 2px;
-      color: #00eaff; animation: glow 2s infinite alternate;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #00eaff, 0 0 15px #00eaff; }
-      to { text-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0; }
-    }
+    header h1 { font-size: 24px; letter-spacing: 2px; color: #00eaff; animation: glow 2s infinite alternate; }
+    @keyframes glow { from { text-shadow: 0 0 5px #00eaff, 0 0 15px #00eaff; } to { text-shadow: 0 0 20px #00ffe0, 0 0 30px #00ffe0; } }
     nav { margin-top: 10px; }
-    nav a {
-      margin: 0 15px; text-decoration: none;
-      color: #fff; font-weight: 500; transition: 0.3s;
-    }
+    nav a { margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: #00eaff; }
 
     section { min-height: 100vh; padding: 100px 50px 50px; }
 
     /* Landing */
     #landing {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; text-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
       background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       position: relative;
     }
-    #landing::before {
-      content: ""; position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.7);
-    }
+    #landing::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); }
     #landing .content { position: relative; z-index: 1; }
-    #landing h2 {
-      font-size: 50px; margin-bottom: 20px;
-      animation: slideIn 2s ease-out;
-    }
+    #landing h2 { font-size: 50px; margin-bottom: 20px; animation: slideIn 2s ease-out; }
     #landing h2 span { color: #00eaff; }
-    @keyframes slideIn {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes slideIn { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     #landing p { font-size: 20px; margin-bottom: 20px; }
-
-    .links a {
-      margin: 10px;
-      text-decoration: none;
-      color: #000;
-      background: #00eaff;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
-    }
+    .links a { margin: 10px; text-decoration: none; color: #000; background: #00eaff; padding: 10px 20px; border-radius: 8px; font-weight: bold; transition: 0.3s; display: inline-block; }
     .links a:hover { background: #00bcd4; }
 
     /* Skills */
     .skills { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    .skill-card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px; border-radius: 10px;
-      border: 1px solid #00eaff;
-      min-width: 120px; text-align: center;
-      transition: 0.3s;
-    }
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 15px #00eaff;
-    }
+    .skill-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; border: 1px solid #00eaff; min-width: 120px; text-align: center; transition: 0.3s; }
+    .skill-card:hover { transform: translateY(-10px); box-shadow: 0 0 15px #00eaff; }
 
     /* Projects */
     #projects { background: #111; }
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
     .project-card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #00eaff;
-      transition: 0.3s;
-      cursor: pointer;
+      background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid #00eaff;
+      transition: 0.3s; cursor: pointer;
     }
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px #00eaff;
-    }
+    .project-card:hover { transform: translateY(-10px); box-shadow: 0 0 20px #00eaff; }
     .project-card h3 { color: #00eaff; margin-bottom: 10px; }
     .project-card p { font-size: 14px; margin-bottom: 15px; }
-    .project-card a {
-      text-decoration: none;
-      color: #000;
-      background: #00eaff;
-      padding: 8px 15px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+    .project-card a { text-decoration: none; color: #000; background: #00eaff; padding: 8px 15px; border-radius: 8px; font-weight: bold; transition: 0.3s; }
     .project-card a:hover { background: #00bcd4; }
 
     /* Calculator */
     #calculator { background: #0d0d0d; text-align: center; }
     .calc-container {
-      max-width: 280px; margin: auto; padding: 20px;
+      max-width: 320px; margin: auto; padding: 20px;
       border: 2px solid #00eaff; border-radius: 15px;
       background: #1a1a1a; box-shadow: 0 0 20px #00eaff;
+      display: grid; grid-template-rows: auto 1fr;
     }
-    input[type="text"] {
-      width: 100%; padding: 12px; margin-bottom: 15px;
-      font-size: 20px; text-align: right;
+    #display {
+      width: 100%; padding: 15px; margin-bottom: 20px;
+      font-size: 26px; text-align: right;
       border: none; border-radius: 8px; outline: none;
     }
+    .buttons {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    }
     .btn {
-      width: 22%; padding: 12px; margin: 5px;
-      font-size: 18px; cursor: pointer;
+      padding: 20px; font-size: 20px; cursor: pointer;
       border-radius: 8px; border: none;
-      background: #00eaff; color: #000; font-weight: bold;
+      background: #e0e0e0; color: #000; font-weight: bold;
       transition: 0.3s;
     }
-    .btn:hover { background: #00bcd4; }
+    .btn:hover { background: #00eaff; color: #000; }
 
     /* Resume */
     #resume { text-align: center; background: #0d0d0d; }
-    #resume a {
-      display: inline-block; padding: 12px 25px;
-      background: #00eaff; color: #000;
-      text-decoration: none; font-weight: bold;
-      border-radius: 8px; transition: 0.3s;
-    }
+    #resume a { display: inline-block; padding: 12px 25px; background: #00eaff; color: #000;
+      text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s; }
     #resume a:hover { background: #00bcd4; }
+
+    /* Footer */
+    footer {
+      background: #111; text-align: center; padding: 20px; border-top: 1px solid #222;
+    }
+    footer p { margin: 5px 0; color: #aaa; }
+    footer a { color: #00eaff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -161,6 +102,7 @@
       <a href="#projects">Projects</a>
       <a href="#calculator">Calculator</a>
       <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -218,7 +160,7 @@
       <div class="project-card">
         <h3>📊 Dashboard UI</h3>
         <p>Modern analytics dashboard interface with interactive charts.</p>
-        <a href="https://preview.colorlib.com/theme/metronic/" target="_blank">Demo</a>
+        <a href="https://preview.keenthemes.com/metronic8/demo1/index.html" target="_blank">Demo</a>
       </div>
     </div>
   </section>
@@ -228,29 +170,31 @@
     <h2 style="margin-bottom:20px;">Simple Calculator</h2>
     <div class="calc-container">
       <input type="text" id="display" disabled>
-      <br>
-      <button class="btn" onclick="clearDisplay()">C</button>
-      <button class="btn" onclick="appendValue('/')">/</button>
-      <button class="btn" onclick="appendValue('*')">*</button>
-      <button class="btn" onclick="deleteLast()">⌫</button>
-      <br>
-      <button class="btn" onclick="appendValue('7')">7</button>
-      <button class="btn" onclick="appendValue('8')">8</button>
-      <button class="btn" onclick="appendValue('9')">9</button>
-      <button class="btn" onclick="appendValue('-')">-</button>
-      <br>
-      <button class="btn" onclick="appendValue('4')">4</button>
-      <button class="btn" onclick="appendValue('5')">5</button>
-      <button class="btn" onclick="appendValue('6')">6</button>
-      <button class="btn" onclick="appendValue('+')">+</button>
-      <br>
-      <button class="btn" onclick="appendValue('1')">1</button>
-      <button class="btn" onclick="appendValue('2')">2</button>
-      <button class="btn" onclick="appendValue('3')">3</button>
-      <button class="btn" onclick="calculateResult()">=</button>
-      <br>
-      <button class="btn" style="width:47%" onclick="appendValue('0')">0</button>
-      <button class="btn" style="width:47%" onclick="appendValue('.')">.</button>
+      <div class="buttons">
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="appendValue('%')">%</button>
+        <button class="btn" onclick="appendValue('/')">÷</button>
+        <button class="btn" onclick="deleteLast()">⌫</button>
+
+        <button class="btn" onclick="appendValue('7')">7</button>
+        <button class="btn" onclick="appendValue('8')">8</button>
+        <button class="btn" onclick="appendValue('9')">9</button>
+        <button class="btn" onclick="appendValue('*')">×</button>
+
+        <button class="btn" onclick="appendValue('4')">4</button>
+        <button class="btn" onclick="appendValue('5')">5</button>
+        <button class="btn" onclick="appendValue('6')">6</button>
+        <button class="btn" onclick="appendValue('-')">−</button>
+
+        <button class="btn" onclick="appendValue('1')">1</button>
+        <button class="btn" onclick="appendValue('2')">2</button>
+        <button class="btn" onclick="appendValue('3')">3</button>
+        <button class="btn" onclick="appendValue('+')">+</button>
+
+        <button class="btn" style="grid-column: span 2;" onclick="appendValue('0')">0</button>
+        <button class="btn" onclick="appendValue('.')">.</button>
+        <button class="btn" onclick="calculateResult()">=</button>
+      </div>
     </div>
   </section>
 
@@ -259,6 +203,14 @@
     <h2 style="margin-bottom:20px;">Download My Resume</h2>
     <a href="Syed_Amaan_Ahmad_Resume.pdf" target="_blank">📄 Download Resume</a>
   </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📧 Email: <a href="mailto:syedamaanahmad@example.com">syedamaanahmad@example.com</a></p>
+    <p>📱 Phone: +91-9876543210</p>
+    <p>🌍 Location: India</p>
+    <p>Created by <span style="color:#00eaff;">Syed Amaan Ahmad</span></p>
+  </footer>
 
   <script>
     let display = document.getElementById("display");
