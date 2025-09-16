@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Maker | Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
+    header { background: #1e293b; color: #fff; padding: 20px; text-align: center; }
+    .container { max-width: 600px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    h2 { color: #1e293b; }
+    button { margin-top: 10px; padding: 10px 20px; border: none; border-radius: 5px; background: #1e293b; color: #fff; cursor: pointer; }
+    button:hover { background: #2563eb; }
+    .result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Online Quiz Maker</h1>
+</header>
+
+<div class="container">
+  <h2>Simple Quiz</h2>
+  <div id="quiz"></div>
+  <button onclick="submitQuiz()">Submit</button>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  const quizData = [
+    {question: "Which language runs in the browser?", options: ["Java", "C", "Python", "JavaScript"], answer: "JavaScript"},
+    {question: "What does CSS stand for?", options: ["Cascading Style Sheets", "Computer Style Syntax", "Creative Sheet System"], answer: "Cascading Style Sheets"},
+    {question: "Which is a backend language?", options: ["HTML", "Node.js", "CSS", "React"], answer: "Node.js"}
+  ];
+
+  const quizContainer = document.getElementById("quiz");
+
+  quizData.forEach((q, index) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <p><b>${index + 1}. ${q.question}</b></p>
+      ${q.options.map(opt => `<label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br>`).join("")}
+      <hr>
+    `;
+    quizContainer.appendChild(div);
+  });
+
+  function submitQuiz() {
+    let score = 0;
+    quizData.forEach((q, index) => {
+      const answer = document.querySelector(\`input[name=q${index}]:checked\`);
+      if(answer && answer.value === q.answer) score++;
+    });
+    document.getElementById("result").innerText = \`You scored ${score} / ${quizData.length} ✅\`;
+  }
+</script>
+
+</body>
+</html>
